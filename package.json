@@ -1,0 +1,40 @@
+{
+  "name": "vanity-repos",
+  "version": "1.0.0",
+  "description": "Opens the pinned repositories of any user on Github.",
+  "main": "cli.js",
+  "bin": {
+    "vanity": "cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified or even needed :) \" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohamedhayibor/vanity-repos.git"
+  },
+  "keywords": [
+    "vanity",
+    "brag",
+    "bragging",
+    "boasting",
+    "repos",
+    "show",
+    "show-off",
+    "boast",
+    "awesome",
+    "github"
+  ],
+  "author": "Mohamed Hayibor <mohamedhayibor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mohamedhayibor/vanity-repos/issues"
+  },
+  "homepage": "https://github.com/mohamedhayibor/vanity-repos#readme",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "got": "^6.3.0",
+    "meow": "^3.7.0",
+    "open": "0.0.5"
+  }
+}
