@@ -39,7 +39,7 @@ got(link)
   .then(res => {
     let $ = cheerio.load( res.body );
 
-    let result = $('ul.boxed-group-inner').children().children();
+    let result = $('span.d-block').children();
 
     if (result.length < 1) {
       console.log(`
@@ -47,18 +47,24 @@ got(link)
       `);
     }
 
-    // console.log('result: ', result);
     let attribs = Object.keys(result).map( (idx) => {
       return result[idx].attribs;
     });
 
     // filter out junk data then push to hrefs (_root, length, prevObjects...)
-    attribs.forEach( attr => {
+    attribs.forEach( (attr, idx) => {
       if ( attr && attr.href ) {
         open(`https://github.com${ attr.href }`);
       }
+      // exit at (6 - 1)th iteration because as of now 9/21/2016 the max of pinned repos is 6
+      if (idx == 5) {
+          process.exit()
+      }
     });
-
+  
   }).catch(err => {
     throw new Error(err);
   })
+
+// Thanks for taking the time to read the source code
+// submit a PR if something has broken (or better implementation)
