@@ -1,6 +1,6 @@
 {
   "name": "vanity-repos",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Opens the pinned repositories of any user on Github.",
   "main": "cli.js",
   "bin": {
